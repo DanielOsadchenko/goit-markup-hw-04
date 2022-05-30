@@ -131,6 +131,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
     letter-spacing: 0.02em;
     color: var(--main-text-color);
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .header-link:hover,
@@ -148,11 +150,42 @@ color: var(--accent-color);
     display: flex;
     align-items: center;
 }
+.mail-icon {
+    margin: 0;
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+}
+
+.mail-icon:hover {
+    fill: currentColor;
+}
+
+.tel-icon {
+    margin: 0;
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.tel-icon:hover {
+    fill: currentColor;
+}
 /* Герой */
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: #2F303A;
+    /* background-image:rgba(47, 48, 58, 0.4), url("../images/hero_bg.jpg"); */
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg.jpg);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .hero-title {
     font-weight: 900;
@@ -185,9 +218,26 @@ color: var(--accent-color);
 .benefits-list {
     display: flex;
 }
+.benefits-list .item {
+    width: 270px;
+}
 .benefits-list .item + .item {
     margin-left: 30px;
 }
+.icon-bg {
+    width: 270px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.benefits-icon {
+    width: 70px;
+    height: 70px;
+}
+
 /* Примеры */
 .examples-list {
     display: flex;
@@ -208,6 +258,7 @@ line-height: 1.19;
 background-color: #ffffff;
 border-bottom-left-radius: 4px;
 border-bottom-right-radius: 4px;
+width: 270px;
 }
 .team + .team {
     margin-left: 30px;
@@ -226,6 +277,39 @@ border-bottom-right-radius: 4px;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+}
+.network-link {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+    justify-content: center;
+    padding-top: 16px;
+}
+.network-link li + li {
+margin-left: 10px;
+}
+.network {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #ffffff;
+}
+
+.network .icon {
+    fill: var(--main-text-color);
+    width: 20px;
+    height: 20px;
+}
+.network:hover {
+    background-color: var(--accent-color);
+}
+.network:hover>.icon {
+    fill: #FFFFFF
 }
 /* Футер */
 .footer-container {
@@ -336,15 +420,4 @@ border-bottom-right-radius: 4px;
 
 
 
-.contact-icon {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    margin-right: 10px;
-    width: 16px;
-    height: 12px;
-    fill: currentColor;
-}
-.contact-icon:hover {
-    fill: currentColor;
-}
+
