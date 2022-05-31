@@ -225,13 +225,15 @@ color: var(--accent-color);
     margin-left: 30px;
 }
 .icon-bg {
+    display: flex;
     width: 270px;
+    height: 120px;
     text-align: center;
     margin-bottom: 30px;
     background-color: #F5F4FA;
     border-radius: 4px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    justify-content: center;
+    align-items: center;
 }
 .benefits-icon {
     width: 70px;
@@ -306,10 +308,13 @@ margin-left: 10px;
     width: 20px;
     height: 20px;
 }
-.network:hover {
+.network:hover, .network:focus {
     background-color: var(--accent-color);
 }
 .network:hover>.icon {
+    fill: #FFFFFF
+}
+.network:focus>.icon {
     fill: #FFFFFF
 }
 /* Клиенты */
@@ -336,6 +341,9 @@ margin-left: 10px;
     border-color: var(--accent-color);
 }
 .clients:hover>.icon {
+    fill: var(--accent-color);
+}
+.clients:focus>.icon {
     fill: var(--accent-color);
 }
 .clients .icon {
@@ -397,7 +405,7 @@ margin-left: 10px;
     text-align: center;
     padding: 12px;
 }
-.connect:hover {
+.connect:hover, .connect:focus {
     background-color: #2196F3;
 }
 .connect .icon {
